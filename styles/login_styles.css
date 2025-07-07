@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #35506b;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.login-container {
+  background-color: #1a2b3c;
+  padding: 30px;
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 5px 15px black;
+  border: 1px solid #35506b;
+}
+
+.logo {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.logo .gold {
+  color: #ffc857;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #d8d8d8;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #1a2b3c;
+  border-radius: 8px;
+  background-color: #35506b;
+  color: white;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #ffc857;
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #39b050;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.btn:hover {
+  background-color: #2d8a3e;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.forgot-password a {
+  color: #448aff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password a:hover {
+  color: #ffc857;
+  text-decoration: underline;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #888;
+}
+
+.register-link {
+  text-align: center;
+  color: #d8d8d8;
+}
+
+.register-link a {
+  color: #448aff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  color: #ffc857;
+  text-decoration: underline;
+}
+
+.back-home {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.back-home a {
+  color: #ffc857;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.back-home a:hover {
+  color: #39b050;
+}
+
+/* Para celulares */
+@media (max-width: 480px) {
+  .login-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .back-home {
+    position: static;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

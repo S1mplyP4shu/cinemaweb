@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #35506b;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px 0;
+}
+
+.register-container {
+  background-color: #1a2b3c;
+  padding: 30px;
+  border-radius: 15px;
+  width: 450px;
+  box-shadow: 0 5px 15px black;
+  border: 1px solid #35506b;
+}
+
+.logo {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.logo .gold {
+  color: #ffc857;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #d8d8d8;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #1a2b3c;
+  border-radius: 8px;
+  background-color: #35506b;
+  color: white;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #ffc857;
+  outline: none;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+input[type="checkbox"] {
+  margin-top: 5px;
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox-group label {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.checkbox-group a {
+  color: #448aff;
+  text-decoration: none;
+}
+
+.checkbox-group a:hover {
+  color: #ffc857;
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #39b050;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.btn:hover {
+  background-color: #2d8a3e;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #888;
+}
+
+.login-link {
+  text-align: center;
+  color: #d8d8d8;
+}
+
+.login-link a {
+  color: #448aff;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  color: #ffc857;
+  text-decoration: underline;
+}
+
+.back-home {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.back-home a {
+  color: #ffc857;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.back-home a:hover {
+  color: #39b050;
+}
+
+.password-requirements {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* Para celulares */
+@media (max-width: 480px) {
+  .register-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .back-home {
+    position: static;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

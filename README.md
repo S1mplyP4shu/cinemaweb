@@ -1,1 +1,2 @@
-# cinemaweb
+# Cinepolitos
+proyecto de programacion web

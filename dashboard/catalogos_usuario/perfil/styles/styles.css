@@ -1,0 +1,707 @@
+/* CSS para perfil de cliente - Estilo básico */
+
+/* Reset de todo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #35506b;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header principal */
+header {
+    background-color: #1a2b3c;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #35506b;
+}
+
+/* Navegación del header */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo del cinema */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+/* Acento dorado */
+.gold-accent {
+    color: #ffc857;
+}
+
+/* Links de navegación */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    background-color: #ffc857;
+    color: #1a2b3c;
+    transform: translateY(-2px);
+}
+
+/* Link activo */
+.nav-links a.active {
+    background-color: #39b050;
+    color: white;
+}
+
+.nav-links a.active:hover {
+    background-color: #2d8a3e;
+    color: white;
+}
+
+/* Menu del usuario */
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Info del usuario */
+.user-info {
+    color: #ffc857;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Dropdown del usuario */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Avatar del usuario */
+.user-avatar {
+    width: 45px;
+    height: 45px;
+    background-color: #39b050;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid #ffc857;
+}
+
+.user-avatar:hover {
+    background-color: #2d8a3e;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(255, 200, 87, 0.4);
+}
+
+/* Contenido del dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #1a2b3c;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    border-radius: 8px;
+    border: 1px solid #35506b;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.dropdown-content a:hover {
+    background-color: #35506b;
+    color: #ffc857;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: aparecer 0.3s ease-out;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    width: 100%;
+}
+
+/* Contenedor del perfil */
+.perfil-container {
+    background-color: #1a2b3c;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border: 1px solid #35506b;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Título del perfil */
+.perfil-container h2 {
+    color: #ffc857;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+/* Datos del perfil */
+.perfil-dato {
+    background-color: #35506b;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #1a2b3c;
+    text-align: left;
+    transition: all 0.3s;
+}
+
+.perfil-dato:hover {
+    background-color: #448aff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 200, 87, 0.3);
+}
+
+/* Labels de los datos */
+.perfil-dato label {
+    display: block;
+    color: #ffc857;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Valores de los datos */
+.perfil-dato span {
+    color: #d8d8d8;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.perfil-dato:hover span {
+    color: #ffffff;
+}
+
+/* Botón editar perfil */
+.btn-editar {
+    background-color: #39b050;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-editar:hover {
+    background-color: #2d8a3e;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(57, 176, 80, 0.4);
+}
+
+.btn-editar:active {
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    background-color: #1a2b3c;
+    text-align: center;
+    padding: 2rem;
+    color: #d8d8d8;
+    border-top: 1px solid #35506b;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Para tablets */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .user-info {
+        font-size: 14px;
+    }
+
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+
+    .perfil-container {
+        padding: 2rem;
+    }
+
+    .perfil-container h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .perfil-dato {
+        padding: 1.2rem;
+    }
+
+    .perfil-dato label {
+        font-size: 1rem;
+    }
+
+    .perfil-dato span {
+        font-size: 1.1rem;
+    }
+
+    .btn-editar {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Para móviles */
+@media (max-width: 480px) {
+    header {
+        padding: 0.8rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .user-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .user-info {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .user-avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .perfil-container {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .perfil-container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .perfil-dato {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .perfil-dato label {
+        font-size: 0.9rem;
+    }
+
+    .perfil-dato span {
+        font-size: 1rem;
+    }
+
+    .btn-editar {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    footer {
+        padding: 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Animaciones */
+.perfil-container {
+    animation: aparecer 0.8s ease-out;
+}
+
+.perfil-dato {
+    animation: deslizar 0.6s ease-out;
+}
+
+.perfil-dato:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.perfil-dato:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.btn-editar {
+    animation: boton 0.8s ease-out 0.4s both;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes deslizar {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes boton {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Estados adicionales */
+.btn-editar:focus {
+    outline: 3px solid #ffc857;
+    outline-offset: 3px;
+}
+
+.nav-links a:focus {
+    outline: 2px solid #ffc857;
+    outline-offset: 2px;
+}
+
+.user-avatar:focus {
+    outline: 2px solid #ffc857;
+    outline-offset: 2px;
+}
+
+/* Hover en logo */
+.logo:hover {
+    color: #ffc857;
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
+/* Efectos de sombra mejorados */
+.perfil-container:hover {
+    box-shadow: 0 12px 35px rgba(255, 200, 87, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Selección de texto */
+::selection {
+    background-color: #ffc857;
+    color: #1a2b3c;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estados de carga */
+.cargando {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.cargando::after {
+    content: "⏳ Cargando perfil...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a2b3c;
+    color: #ffc857;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 2px solid #35506b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Tooltip básico */
+.tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.tooltip:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1a2b3c;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    border: 1px solid #35506b;
+}
+
+/* Clases de utilidad */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+/* Colores de texto */
+.text-green {
+    color: #39b050;
+}
+
+.text-gold {
+    color: #ffc857;
+}
+
+.text-blue {
+    color: #448aff;
+}
+
+.text-red {
+    color: #ff6b6b;
+}
+
+.text-gray {
+    color: #888;
+}
+
+.text-light {
+    color: #d8d8d8;
+}
+
+/* Bordes coloreados */
+.border-green {
+    border-left: 4px solid #39b050;
+}
+
+.border-gold {
+    border-left: 4px solid #ffc857;
+}
+
+.border-blue {
+    border-left: 4px solid #448aff;
+}
+
+.border-red {
+    border-left: 4px solid #ff6b6b;
+}
+
+/* Estados de mensaje */
+.mensaje-exito {
+    background-color: #39b050;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.mensaje-error {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.mensaje-advertencia {
+    background-color: #ffc857;
+    color: #1a2b3c;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+/* Scroll personalizado */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a2b3c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #35506b;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffc857;
+}
+
+/* Mejoras de contraste */
+.perfil-dato:focus-within {
+    outline: 2px solid #ffc857;
+    outline-offset: 2px;
+}
+
+/* Efectos adicionales */
+.perfil-dato label::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #ffc857;
+    margin-top: 5px;
+    transition: width 0.3s;
+}
+
+.perfil-dato:hover label::after {
+    width: 60px;
+}
+
+/* Indicadores de estado */
+.estado-activo {
+    color: #39b050;
+    font-weight: bold;
+}
+
+.estado-inactivo {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+/* Separador visual */
+.separador {
+    height: 2px;
+    background: linear-gradient(90deg, #39b050, #ffc857, #448aff);
+    margin: 2rem 0;
+    border-radius: 1px;
+}
+
+/* Mejoras visuales del header */
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #39b050, #ffc857, #448aff);
+}
+
+header {
+    position: relative;
+}
+
+/* Efectos de transición globales */
+* {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}

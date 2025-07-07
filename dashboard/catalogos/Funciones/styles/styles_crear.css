@@ -1,0 +1,124 @@
+/* Estructura base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #35506b;
+    color: white;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffc857;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Formulario */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #1a2b3c;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    border: 1px solid #35506b;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #ffc857;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #35506b;
+    background-color: #35506b;
+    color: white;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #ffc857;
+    box-shadow: 0 0 0 2px rgba(255, 200, 87, 0.2);
+}
+
+/* Botones */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #39b050;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2d8a3e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(57, 176, 80, 0.3);
+}
+
+.logout-btn {
+    background-color: #35506b;
+    color: white;
+    border: 2px solid #448aff;
+}
+
+.logout-btn:hover {
+    background-color: #448aff;
+    color: white;
+    box-shadow: 0 4px 8px rgba(68, 138, 255, 0.3);
+}
+
+/* Mensaje de estado */
+.mensaje {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.mensaje-exito {
+    color: #39b050;
+    background-color: rgba(57, 176, 80, 0.1);
+    border: 1px solid #39b050;
+}
+
+.mensaje-error {
+    color: #ff6b6b;
+    background-color: rgba(255, 107, 107, 0.1);
+    border: 1px solid #ff6b6b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    form {
+        padding: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}

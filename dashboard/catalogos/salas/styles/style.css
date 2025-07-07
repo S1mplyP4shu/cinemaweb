@@ -1,0 +1,321 @@
+/* Variables básicas */
+:root {
+  --azul: #35506b;
+  --azul-oscuro: #1a2b3c;
+  --amarillo: #ffc857;
+  --verde: #39b050;
+  --rojo: #ff6b6b;
+  --azul-claro: #448aff;
+  --blanco: #ffffff;
+  --gris: #d8d8d8;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--azul);
+  color: var(--blanco);
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: var(--azul-oscuro);
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--blanco);
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--amarillo);
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: var(--verde);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.admin-badge {
+  background-color: var(--amarillo);
+  color: var(--azul-oscuro);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Main */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+  background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul) 100%);
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--amarillo);
+}
+
+.welcome-section p {
+  font-size: 1.2rem;
+  color: var(--gris);
+  margin-bottom: 2rem;
+}
+
+/* Botones */
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.2rem;
+}
+
+.btn-primary {
+  background-color: var(--verde);
+  color: var(--blanco);
+}
+
+.btn-primary:hover {
+  background-color: #2d8a3e;
+}
+
+.logout-btn {
+  background-color: var(--azul);
+  color: var(--blanco);
+  border: 2px solid var(--azul-claro);
+}
+
+.logout-btn:hover {
+  background-color: var(--azul-claro);
+}
+
+/* Sección de estadísticas */
+.stats-section {
+  background-color: var(--azul-oscuro);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  color: var(--blanco);
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+/* Encabezados */
+thead {
+  background-color: var(--azul);
+}
+
+thead th {
+  padding: 1rem;
+  font-weight: bold;
+  color: var(--amarillo);
+  border-bottom: 2px solid var(--verde);
+  font-size: 1.1rem;
+}
+
+/* Filas */
+tbody tr {
+  background-color: var(--azul);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #2a4155;
+}
+
+tbody tr:hover {
+  background-color: var(--azul-claro);
+}
+
+/* Celdas */
+tbody td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--azul-oscuro);
+  color: var(--gris);
+  font-size: 1rem;
+}
+
+/* Primera columna (ID) */
+tbody td:first-child {
+  font-weight: bold;
+  color: var(--amarillo);
+  font-size: 1.1rem;
+}
+
+/* Columna de acciones */
+tbody td:last-child {
+  text-align: center;
+}
+
+/* Botones en tabla */
+tbody .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  margin: 0.1rem;
+}
+
+tbody .logout-btn {
+  background-color: var(--rojo);
+  border: 2px solid #e55555;
+}
+
+tbody .logout-btn:hover {
+  background-color: #e55555;
+}
+
+/* Footer */
+footer {
+  background-color: var(--azul-oscuro);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  color: var(--gris);
+}
+
+/* Estados */
+.estado-activo {
+  color: var(--verde);
+  font-weight: bold;
+}
+
+.estado-inactivo {
+  color: var(--rojo);
+  font-weight: bold;
+}
+
+.estado-mantenimiento {
+  color: var(--amarillo);
+  font-weight: bold;
+}
+
+/* Sin datos */
+.no-datos {
+  text-align: center;
+  padding: 3rem;
+  color: #888;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  .user-info {
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .welcome-section {
+    padding: 2rem 1rem;
+  }
+
+  .stats-section {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  tbody .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .stats-section {
+    padding: 0.5rem;
+  }
+
+  table {
+    min-width: 500px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 0.6rem 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  tbody .btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+  }
+}

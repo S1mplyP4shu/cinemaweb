@@ -1,0 +1,385 @@
+/* CSS para detalle de película - Estilo simple y optimizado */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #35506b;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #1a2b3c;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.gold-accent {
+  color: #ffc857;
+}
+
+/* Navegación */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #ffc857;
+  color: #1a2b3c;
+}
+
+/* Usuario */
+.user-menu {
+  color: #ffc857;
+  font-weight: bold;
+}
+
+/* Main */
+main {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+  background-color: #1a2b3c;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  text-align: center;
+  border: 1px solid #35506b;
+}
+
+.welcome-section h1 {
+  color: #ffc857;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.welcome-section p {
+  color: #d8d8d8;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.welcome-section img {
+  max-width: 200px;
+  border-radius: 8px;
+  margin: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Sección de asientos */
+.stats-section {
+  background-color: #1a2b3c;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #35506b;
+  text-align: center;
+}
+
+.stats-section h2 {
+  color: #ffc857;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Grid de asientos */
+.asientos {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  gap: 8px;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+/* Asientos individuales */
+.asiento {
+  width: 40px;
+  height: 40px;
+  background-color: #39b050;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.asiento:hover {
+  background-color: #2d8a3e;
+  transform: scale(1.1);
+}
+
+.asiento.reservado {
+  background-color: #ff6b6b;
+  cursor: not-allowed;
+}
+
+.asiento.reservado:hover {
+  background-color: #ff6b6b;
+  transform: none;
+}
+
+.asiento.seleccionado {
+  background-color: #ffc857;
+  border-color: #e6b34a;
+  transform: scale(1.1);
+}
+
+/* Botón reservar */
+.btn {
+  background-color: #39b050;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: #2d8a3e;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(57, 176, 80, 0.4);
+}
+
+.btn:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Footer */
+footer {
+  background-color: #1a2b3c;
+  text-align: center;
+  padding: 2rem;
+  color: #d8d8d8;
+  border-top: 1px solid #35506b;
+}
+
+/* Leyenda de asientos */
+.leyenda {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.leyenda-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.leyenda-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+.disponible {
+  background-color: #fff;
+}
+
+.ocupado {
+  background-color: #ff6b6b;
+}
+
+.seleccionado-leyenda {
+  background-color: #39b050;
+  border: 2px solid #2d8a3e;
+}
+.funciones-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex-direction: column;
+}
+.funcion-card {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.seat-row {
+    margin-bottom: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .welcome-section,
+  .stats-section {
+    padding: 1.5rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  .stats-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .asientos {
+    grid-template-columns: repeat(8, 35px);
+    gap: 6px;
+  }
+
+  .asiento {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  .leyenda {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .asientos {
+    grid-template-columns: repeat(6, 30px);
+    gap: 4px;
+  }
+
+  .asiento {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.8rem;
+  }
+}
+
+/* Animaciones */
+.welcome-section,
+.stats-section {
+  animation: aparecer 0.6s ease-out;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efectos adicionales */
+.welcome-section:hover,
+.stats-section:hover {
+  box-shadow: 0 8px 20px rgba(255, 200, 87, 0.2);
+}
+
+::selection {
+  background-color: #ffc857;
+  color: #1a2b3c;
+}
+
+.seat-btn {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    margin: 8px 10px 8px 0;
+    border-radius: 8px;
+    border: 2px solid #FFC857;
+    background: #fff;
+    color: #222;
+    font-weight: bold;
+    text-align: center;
+    line-height: 42px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+    user-select: none;
+}
+.seat-btn:hover:not(.disabled) {
+    background: #ffe7b3;
+    border-color: #ffb300;
+}
+.seat-btn.selected {
+    background: #39b050 !important;   /* Verde */
+    color: #fff !important;
+    border-color: #2d8a3e !important; /* Verde oscuro */
+    box-shadow: 0 0 0 3px #b2f2e5;
+}
+.seat-btn.disabled {
+    background: #e63946 !important;
+    color: #fff !important;
+    border-color: #b71c1c;
+    cursor: not-allowed;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+.seat-row {
+    margin-bottom: 12px;
+}

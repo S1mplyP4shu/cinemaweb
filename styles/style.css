@@ -1,0 +1,231 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #35506B;
+            color: white;
+            display: block;
+            margin: 0%;
+        }
+
+        header {
+            background-color: #1A2B3C;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    
+        .logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px  2px 0 #000,
+        2px  2px 0 #000;
+}
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #FFC857;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #39b050; /* Rojo - emoción, pasión, atención */
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #448AFF;
+            color: white;
+            border: 2px solid #2962ff;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px #448AFF;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px #39b050;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(rgba(58, 85, 137, 0.7), rgba(10, 10, 20, 0.9)), url('/placeholder.svg?height=400&width=1200');
+            background-size: cover;
+            padding: 4rem 2rem;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #FFC857; 
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.8rem;
+            color: #ffffff;
+        }
+
+        .movies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .movie-card {
+            background-color: #1a2b3c3f; /* Azul muy oscuro - misterio, inmersión */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #1A2B3C;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px #ffc75743;
+        }
+
+        .movie-poster {
+            width: 100%;
+            height: 400px;
+            background-color: #35506b95;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #888;
+        }
+
+        .movie-info {
+            padding: 1.5rem;
+        }
+
+        .movie-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #FFC857; /* Rojo - emoción, pasión */
+        }
+
+        .movie-genre {
+            color: #d8d8d8;
+            margin-bottom: 1rem;
+        }
+
+        .movie-times {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .time-slot {
+            background-color: #252538; /* Azul oscuro - confianza */
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            border: 1px solid #3a3a5a;
+            transition: background-color 0.3s;
+        }
+
+        .time-slot:hover {
+            background-color: #e50914; /* Rojo - emoción, pasión */
+        }
+
+        footer {
+            background-color: #1A2B3C; /* Azul muy oscuro - misterio, inmersión */
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            color: #d8d8d8;
+            border-top: 1px solid #252538;
+        }
+
+        .section-title {
+            position: relative;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #d8d8d8;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #e50914; /* Rojo - emoción, pasión */
+        }
+
+        .yellow {
+            color: #FFC857; /* Dorado - lujo, premios, experiencia premium */
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .movies-grid {
+                grid-template-columns: 1fr;
+            }
+        }

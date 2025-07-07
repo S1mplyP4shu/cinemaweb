@@ -1,0 +1,350 @@
+/* Variables básicas */
+:root {
+  --azul: #35506b;
+  --azul-oscuro: #1a2b3c;
+  --amarillo: #ffc857;
+  --verde: #39b050;
+  --rojo: #ff6b6b;
+  --azul-claro: #448aff;
+  --blanco: #ffffff;
+  --gris: #d8d8d8;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--azul);
+  color: var(--blanco);
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: var(--azul-oscuro);
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--blanco);
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--amarillo);
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: var(--verde);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.admin-badge {
+  background-color: var(--amarillo);
+  color: var(--azul-oscuro);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: var(--azul-oscuro);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  border: 1px solid var(--azul);
+}
+
+.dropdown-content a {
+  color: var(--blanco);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--azul);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Main */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+  background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul) 100%);
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.welcome-section h1 {
+  color: var(--amarillo);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-section p {
+  font-size: 1.2rem;
+  color: var(--gris);
+  margin-bottom: 2rem;
+}
+
+/* Botones */
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--verde);
+  color: var(--blanco);
+}
+
+.btn-primary:hover {
+  background-color: #2d8a3e;
+}
+
+.logout-btn {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
+
+.logout-btn:hover {
+  background-color: #e55555;
+}
+
+/* Sección de estadísticas/tabla */
+.stats-section {
+  background-color: var(--azul-oscuro);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  background-color: var(--azul-oscuro);
+  border-radius: 10px;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+/* Encabezado */
+thead {
+  background-color: var(--azul);
+}
+
+thead th {
+  padding: 15px;
+  color: var(--amarillo);
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Filas */
+tbody tr {
+  border-bottom: 1px solid var(--azul);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #243447;
+}
+
+tbody tr:hover {
+  background-color: var(--azul-claro);
+}
+
+/* Celdas */
+tbody td {
+  padding: 15px;
+  color: var(--gris);
+}
+
+/* Primera columna (ID) */
+tbody td:first-child {
+  color: var(--amarillo);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Segunda columna (Nombre) */
+tbody td:nth-child(2) {
+  color: var(--verde);
+  font-weight: bold;
+}
+
+/* Tercera columna (Email) */
+tbody td:nth-child(3) {
+  color: var(--azul-claro);
+}
+
+/* Cuarta columna (Rol) */
+tbody td:nth-child(4) {
+  color: var(--amarillo);
+  font-weight: bold;
+}
+
+/* Última columna (Acciones) */
+tbody td:last-child {
+  text-align: center;
+}
+
+/* Botones en tabla */
+tbody .btn {
+  padding: 8px 15px;
+  font-size: 14px;
+}
+
+/* Sin datos */
+.no-datos {
+  text-align: center;
+  padding: 50px;
+  color: #888;
+  font-style: italic;
+  background-color: var(--azul-oscuro);
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .user-info {
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .welcome-section {
+    padding: 2rem 1rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  .stats-section {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 600px;
+    font-size: 14px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 10px 8px;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  tbody .btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0.5rem;
+  }
+
+  .welcome-section {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .stats-section {
+    padding: 0.5rem;
+  }
+
+  table {
+    min-width: 500px;
+    font-size: 12px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 8px 5px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  tbody .btn {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+}

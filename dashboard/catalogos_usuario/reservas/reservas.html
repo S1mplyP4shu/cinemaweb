@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Reservas | CinemaWeb</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Cinema<span class="gold-accent">Web</span></div>
+            <div class="nav-links">
+                <a href="../../index-cliente.php">Inicio</a>
+                <a href="../../logout.php">Cerrar Sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="mis-reservas">
+            <h2>Mis Reservas</h2>
+            <table id="tablaReservas">
+                <thead>
+                    <tr>
+                        <th>Película</th>
+                        <th>Sala</th>
+                        <th>Horario</th>
+                        <th>Boletos</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se llenarán las reservas con JS -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('get_reservas_usuario.php')
+        .then(response => response.json())
+        .then(reservas => {
+            const tbody = document.querySelector('#tablaReservas tbody');
+            tbody.innerHTML = '';
+            if (reservas.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5">No tienes reservas.</td></tr>';
+            } else {
+                reservas.forEach(r => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${r.pelicula}</td>
+                        <td>${r.sala}</td>
+                        <td>${r.horario}</td>
+                        <td>${r.boletos}</td>
+                        <td>
+                            <button class="btn-eliminar" data-ids="${r.ids}">Eliminar</button>
+                        </td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+
+                // Evento para eliminar
+                tbody.querySelectorAll('.btn-eliminar').forEach(function(btn) {
+                    btn.addEventListener('click', function() {
+                        if (confirm('¿Seguro que deseas eliminar esta reserva?')) {
+                            fetch('eliminar_reserva.php', {
+                                method: 'POST',
+                                headers: {'Content-Type': 'application/json'},
+                                body: JSON.stringify({ ids: this.dataset.ids })
+                            })
+                            .then(res => res.json())
+                            .then(data => {
+                                if (data.status === 'success') {
+                                    this.closest('tr').remove();
+                                } else {
+                                    alert('No se pudo eliminar la reserva.');
+                                }
+                            });
+                        }
+                    });
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error al cargar reservas:', error);
+        });
+});
+</script>
+</body>
+</html>

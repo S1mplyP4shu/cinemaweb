@@ -1,0 +1,276 @@
+/* Variables básicas */
+:root {
+  --azul: #35506b;
+  --azul-oscuro: #1a2b3c;
+  --amarillo: #ffc857;
+  --verde: #39b050;
+  --rojo: #ff6b6b;
+  --azul-claro: #448aff;
+  --blanco: #ffffff;
+  --gris: #d8d8d8;
+  --gris-oscuro: #888;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--azul);
+  color: var(--blanco);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Contenedor principal */
+.contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Título */
+h1 {
+  color: var(--amarillo);
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  color: var(--gris);
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.breadcrumb a {
+  color: var(--amarillo);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Formulario */
+form {
+  background-color: var(--azul-oscuro);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 15px;
+  border: 2px solid var(--azul);
+}
+
+/* Labels */
+label {
+  display: block;
+  color: var(--gris);
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+label:first-of-type {
+  margin-top: 0;
+}
+
+/* Campos obligatorios */
+label[for]:after {
+  content: " *";
+  color: var(--amarillo);
+  font-weight: bold;
+}
+
+/* Inputs */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid var(--azul);
+  border-radius: 8px;
+  background-color: var(--azul);
+  color: var(--blanco);
+  margin-bottom: 15px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--amarillo);
+  background-color: var(--azul-claro);
+}
+
+input[type="text"]:hover {
+  border-color: var(--verde);
+}
+
+input[type="text"]::placeholder {
+  color: var(--gris-oscuro);
+}
+
+/* Campos requeridos */
+input[required] {
+  border-left: 3px solid var(--amarillo);
+}
+
+/* Estados de validación */
+input[type="text"]:valid {
+  border-left: 4px solid var(--verde);
+}
+
+input[type="text"]:invalid {
+  border-left: 4px solid var(--rojo);
+}
+
+/* Botones */
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px 5px;
+}
+
+.btn-primary {
+  background-color: var(--verde);
+  color: var(--blanco);
+}
+
+.btn-primary:hover {
+  background-color: #2d8a3e;
+}
+
+.logout-btn {
+  background-color: var(--azul);
+  color: var(--blanco);
+  border: 2px solid var(--azul-claro);
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 23px;
+}
+
+.logout-btn:hover {
+  background-color: var(--azul-claro);
+  border-color: #2962ff;
+}
+
+/* Contenedor de botones */
+.botones {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid var(--azul);
+}
+
+/* Mensajes */
+.exito {
+  background-color: var(--verde);
+  color: var(--blanco);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.error {
+  background-color: var(--rojo);
+  color: var(--blanco);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Texto de ayuda */
+.ayuda {
+  font-size: 12px;
+  color: var(--gris-oscuro);
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Separador */
+hr {
+  border: none;
+  height: 2px;
+  background-color: var(--azul);
+  margin: 20px 0;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: var(--gris-oscuro);
+  font-size: 12px;
+}
+
+/* Estado de carga */
+.cargando {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  form {
+    padding: 25px;
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  button,
+  .logout-btn {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button,
+  .logout-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
